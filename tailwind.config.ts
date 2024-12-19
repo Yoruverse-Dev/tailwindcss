@@ -1,4 +1,9 @@
 import { Config } from 'tailwindcss'
+import { YoruTailwind } from './plugin'
+
+const yoruTW = new YoruTailwind()
+const plugin = yoruTW.plugin
+
 export default {
   content: [
     "./index.html",
@@ -7,5 +12,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin
+  ],
 } satisfies Config

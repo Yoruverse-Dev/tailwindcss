@@ -21,15 +21,15 @@ export default tseslint.config(
       react,
     },
     rules: {
+      semi: ['error', 'never'],
+      quotes: ['error', 'single'],
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
+        ...react.configs.recommended.rules,
+        ...react.configs['jsx-runtime'].rules,
       ],
-      semi: ['error', 'never'],
-      quotes: ['error', 'single'],
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
     },
   },
 )
